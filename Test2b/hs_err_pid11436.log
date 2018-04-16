@@ -1,0 +1,81 @@
+#
+# A fatal error has been detected by the Java Runtime Environment:
+#
+#  EXCEPTION_ACCESS_VIOLATION (0xc0000005) at pc=0x00007ffdbc136f60, pid=11436, tid=0x0000000000003614
+#
+# JRE version: Java(TM) SE Runtime Environment (8.0_162-b12) (build 1.8.0_162-b12)
+# Java VM: Java HotSpot(TM) 64-Bit Server VM (25.162-b12 mixed mode windows-amd64 compressed oops)
+# Problematic frame:
+# C  [lwjgl.dll+0x16f60]
+#
+# Failed to write core dump. Minidumps are not enabled by default on client versions of Windows
+#
+# If you would like to submit a bug report, please visit:
+#   http://bugreport.java.com/bugreport/crash.jsp
+# The crash happened outside the Java Virtual Machine in native code.
+# See problematic frame for where to report the bug.
+#
+
+---------------  T H R E A D  ---------------
+
+Current thread (0x0000000005255800):  JavaThread "main" [_thread_in_native, id=13844, stack(0x0000000005150000,0x0000000005250000)]
+
+siginfo: ExceptionCode=0xc0000005, reading address 0xffffffffffffffff
+
+Registers:
+RAX=0x00007ffdbc133e90, RBX=0x00000000199de9d0, RCX=0x0000b76f9a53d79f, RDX=0x000000000524f2d0
+RSP=0x000000000524f248, RBP=0x000000000524f2c0, RSI=0x000000001c4dcff0, RDI=0x0000000005357e70
+R8 =0x0000b76f9a53d79f, R9 =0x0000000003457c70, R10=0x0000000005368c3b, R11=0x000000007133be30
+R12=0x0000000000000000, R13=0x00000000199de9d0, R14=0x000000000524f2e8, R15=0x0000000005255800
+RIP=0x00007ffdbc136f60, EFLAGS=0x0000000000010206
+
+Top of Stack: (sp=0x000000000524f248)
+0x000000000524f248:   0000000005368c67 0000000005255800
+0x000000000524f258:   00000000199de9d0 000000001c4dcff0
+0x000000000524f268:   0000000005255800 000000000524f348
+0x000000000524f278:   0000000005368962 000000000524f280
+0x000000000524f288:   00000000199de9d0 000000000524f2e8
+0x000000000524f298:   00000000199e0298 0000000000000000
+0x000000000524f2a8:   00000000199de9d0 0000000000000000
+0x000000000524f2b8:   000000000524f2e0 000000000524f330
+0x000000000524f2c8:   0000000005357e70 00000000d6368ca0
+0x000000000524f2d8:   00000000053621d7 0000b76f9a53d79f
+0x000000000524f2e8:   0000000000000001 000000000524f2f0
+0x000000000524f2f8:   00000000199dea74 000000000524f348
+0x000000000524f308:   00000000199e0298 0000000000000000
+0x000000000524f318:   00000000199deaa0 000000000524f2e0
+0x000000000524f328:   000000000524f340 000000000524f390
+0x000000000524f338:   0000000005357e70 0000b76f9a53d79f 
+
+Instructions: (pc=0x00007ffdbc136f60)
+0x00007ffdbc136f40:   41 08 49 89 00 8b 01 c3 cc cc cc cc cc cc cc cc
+0x00007ffdbc136f50:   ba 28 00 00 00 e9 e6 00 00 00 cc cc cc cc cc cc
+0x00007ffdbc136f60:   48 8b 41 20 c3 cc cc cc cc cc cc cc cc cc cc cc
+0x00007ffdbc136f70:   4c 89 41 18 4c 89 49 20 c3 cc cc cc cc cc cc cc 
+
+
+Register to memory mapping:
+
+RAX=0x00007ffdbc133e90 is an unknown value
+RBX={method} {0x00000000199de9d8} 'ndcbGetUserData' '(J)J' in 'org/lwjgl/system/dyncall/DynCallback'
+RCX=0x0000b76f9a53d79f is an unknown value
+RDX=0x000000000524f2d0 is pointing into the stack for thread: 0x0000000005255800
+RSP=0x000000000524f248 is pointing into the stack for thread: 0x0000000005255800
+RBP=0x000000000524f2c0 is pointing into the stack for thread: 0x0000000005255800
+RSI=0x000000001c4dcff0 is an unknown value
+RDI=0x0000000005357e70 is at code_begin+1040 in an Interpreter codelet
+invoke return entry points  [0x0000000005357a60, 0x0000000005358440]  2528 bytes
+R8 =0x0000b76f9a53d79f is an unknown value
+R9 =0x0000000003457c70 is an unknown value
+R10=0x0000000005368c3b is at code_begin+891 in an Interpreter codelet
+method entry point (kind = native)  [0x00000000053688c0, 0x0000000005369280]  2496 bytes
+R11=0x000000007133be30 is an unknown value
+R12=0x0000000000000000 is an unknown value
+R13={method} {0x00000000199de9d8} 'ndcbGetUserData' '(J)J' in 'org/lwjgl/system/dyncall/DynCallback'
+R14=0x000000000524f2e8 is pointing into the stack for thread: 0x0000000005255800
+R15=0x0000000005255800 is a thread
+
+
+Stack: [0x0000000005150000,0x0000000005250000],  sp=0x000000000524f248,  free space=1020k
+Native frames: (J=compiled Java code, j=interpreted, Vv=VM code, C=native code)
+C  [lwjgl.dll+0x16f60]

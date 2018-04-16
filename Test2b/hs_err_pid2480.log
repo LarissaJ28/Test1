@@ -1,0 +1,82 @@
+#
+# A fatal error has been detected by the Java Runtime Environment:
+#
+#  EXCEPTION_ACCESS_VIOLATION (0xc0000005) at pc=0x00007ffdbe2a6f60, pid=2480, tid=0x0000000000002f58
+#
+# JRE version: Java(TM) SE Runtime Environment (8.0_162-b12) (build 1.8.0_162-b12)
+# Java VM: Java HotSpot(TM) 64-Bit Server VM (25.162-b12 mixed mode windows-amd64 compressed oops)
+# Problematic frame:
+# C  [lwjgl.dll+0x16f60]
+#
+# Failed to write core dump. Minidumps are not enabled by default on client versions of Windows
+#
+# If you would like to submit a bug report, please visit:
+#   http://bugreport.java.com/bugreport/crash.jsp
+# The crash happened outside the Java Virtual Machine in native code.
+# See problematic frame for where to report the bug.
+#
+
+---------------  T H R E A D  ---------------
+
+Current thread (0x0000000004cd6000):  JavaThread "main" [_thread_in_native, id=12120, stack(0x0000000004bd0000,0x0000000004cd0000)]
+
+siginfo: ExceptionCode=0xc0000005, reading address 0xffffffffffffffff
+
+Registers:
+RAX=0x00007ffdbe2a3e90, RBX=0x000000001945c9d0, RCX=0x0000a3190b99d2e0, RDX=0x0000000004ccf178
+RSP=0x0000000004ccf0e8, RBP=0x0000000004ccf168, RSI=0x0000000000000108, RDI=0x0000000000008184
+R8 =0x0000a3190b99d2e0, R9 =0x00000000d7cb0960, R10=0x0000000004de8c3b, R11=0x000000007133be30
+R12=0x0000000000000000, R13=0x000000001945c9d0, R14=0x0000000004ccf190, R15=0x0000000004cd6000
+RIP=0x00007ffdbe2a6f60, EFLAGS=0x0000000000010206
+
+Top of Stack: (sp=0x0000000004ccf0e8)
+0x0000000004ccf0e8:   0000000004de8c67 0000000004cd6000
+0x0000000004ccf0f8:   00000000193c72f0 0000000004cd6000
+0x0000000004ccf108:   0000000026c76c90 0000000004cd6000
+0x0000000004ccf118:   0000000004ccf240 00000000193c72f0
+0x0000000004ccf128:   0000000004ccf128 0000000000000000
+0x0000000004ccf138:   0000000004ccf190 000000001945e298
+0x0000000004ccf148:   0000000000000000 000000001945c9d0
+0x0000000004ccf158:   0000000000000000 0000000004ccf188
+0x0000000004ccf168:   0000000004ccf1d8 0000000004dd7e70
+0x0000000004ccf178:   00000000d7ca7d00 0000000004de21d7
+0x0000000004ccf188:   0000a3190b99d2e0 0000000000000001
+0x0000000004ccf198:   0000000004ccf198 000000001945ca74
+0x0000000004ccf1a8:   0000000004ccf1f0 000000001945e298
+0x0000000004ccf1b8:   0000000000000000 000000001945caa0
+0x0000000004ccf1c8:   0000000004ccf188 0000000004ccf1e8
+0x0000000004ccf1d8:   0000000004ccf238 0000000004dd7e70 
+
+Instructions: (pc=0x00007ffdbe2a6f60)
+0x00007ffdbe2a6f40:   41 08 49 89 00 8b 01 c3 cc cc cc cc cc cc cc cc
+0x00007ffdbe2a6f50:   ba 28 00 00 00 e9 e6 00 00 00 cc cc cc cc cc cc
+0x00007ffdbe2a6f60:   48 8b 41 20 c3 cc cc cc cc cc cc cc cc cc cc cc
+0x00007ffdbe2a6f70:   4c 89 41 18 4c 89 49 20 c3 cc cc cc cc cc cc cc 
+
+
+Register to memory mapping:
+
+RAX=0x00007ffdbe2a3e90 is an unknown value
+RBX={method} {0x000000001945c9d8} 'ndcbGetUserData' '(J)J' in 'org/lwjgl/system/dyncall/DynCallback'
+RCX=0x0000a3190b99d2e0 is an unknown value
+RDX=0x0000000004ccf178 is pointing into the stack for thread: 0x0000000004cd6000
+RSP=0x0000000004ccf0e8 is pointing into the stack for thread: 0x0000000004cd6000
+RBP=0x0000000004ccf168 is pointing into the stack for thread: 0x0000000004cd6000
+RSI=0x0000000000000108 is an unknown value
+RDI=0x0000000000008184 is an unknown value
+R8 =0x0000a3190b99d2e0 is an unknown value
+R9 =0x00000000d7cb0960 is an oop
+java.lang.Class 
+ - klass: 'java/lang/Class'
+R10=0x0000000004de8c3b is at code_begin+891 in an Interpreter codelet
+method entry point (kind = native)  [0x0000000004de88c0, 0x0000000004de9280]  2496 bytes
+R11=0x000000007133be30 is an unknown value
+R12=0x0000000000000000 is an unknown value
+R13={method} {0x000000001945c9d8} 'ndcbGetUserData' '(J)J' in 'org/lwjgl/system/dyncall/DynCallback'
+R14=0x0000000004ccf190 is pointing into the stack for thread: 0x0000000004cd6000
+R15=0x0000000004cd6000 is a thread
+
+
+Stack: [0x0000000004bd0000,0x0000000004cd0000],  sp=0x0000000004ccf0e8,  free space=1020k
+Native frames: (J=compiled Java code, j=interpreted, Vv=VM code, C=native code)
+C  [lwjgl.dll+0x16f60]
